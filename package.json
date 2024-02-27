@@ -1,15 +1,12 @@
 {
-    "name": "@mkkellogg/gaussian-splats-3d",
+    "name": "gaussian-splats-3d",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mkkellogg/GaussianSplat3D"
+        "url": "https://github.com/MIMNSI/splats-view"
     },
     "version": "0.2.3",
-    "description": "Three.js-based 3D Gaussian splat viewer",
     "module": "build/gaussian-splats-3d.module.js",
     "main": "build/gaussian-splats-3d.umd.cjs",
-    "author": "Mark Kellogg",
-    "license": "MIT",
     "type": "module",
     "scripts": {
         "build-demo": "mkdir -p ./build/demo && cp -r ./demo ./build/ && cp ./node_modules/three/build/three.module.js ./build/demo/lib/three.module.js",
@@ -23,7 +20,8 @@
         "fix-styling": "npx stylelint **/*.scss --fix",
         "fix-js": "npx eslint src --fix",
         "lint": "npx eslint 'src/**/*.js' || true",
-        "prettify": "npx prettier --write 'src/**/*.js'"
+        "prettify": "npx prettier --write 'src/**/*.js'",
+        "deploy": "gh-pages -d build"
     },
     "watch": {
         "build-library": {
